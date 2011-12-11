@@ -9,8 +9,9 @@
  * Optional polyfills in `future.js` for the most important JS features 
    missing from older browsers (e.g., `Array.map()`, `Object.keys()`)
 
-That's it.[^1] `u.js` has no dependencies and works in any browser. The code has seen extensive 
-production use, but the tests were part of a bigger project and have not yet been ported.
+That's it.<sup><a name="fn1_link" href="#fn1">1</a></sup> `u.js` has no dependencies and works in 
+any browser. The code has seen extensive production use, but the tests were part of a bigger 
+project and have not yet been ported.
 
 
 ## Why?
@@ -52,8 +53,11 @@ Copies all keys from each `donor` onto the `target` object, and then returns it.
 
 ### u.bind(fn, context, ...args) -> Function
 
-Returns a function `(...more)` that when invoked, calls the original function with the supplied
-context, plus any of the supplied arguments concatenated together.
+Stub for `Function.prototype.bind()`: returns a function `(...more_args)` that when invoked, 
+calls the original function with the supplied context and arguments from both invocations 
+concatenated together:
+
+`fn.apply( context, args.concat(more_args) )`
 
 
 ### u.isArray(o) -> Boolean
@@ -86,10 +90,10 @@ Sets a cookie, returning an updated map from cookie key to value.
 By default, the cookie will be set for all paths on the current domain using the current document,
 expiring on a distant date:
 
-- expires: 'Sun, 24-Mar-2024 11:11:11 GMT'
-- path: '/'
-- domain: doc.domain
-- doc: window.document
+- expires: `'Sun, 24-Mar-2024 11:11:11 GMT'`
+- path: `'/'`
+- domain: `doc.domain`
+- doc: `window.document`
 
 
 
@@ -98,6 +102,6 @@ expiring on a distant date:
 Open a ticket at [github](http://github.com/dsc/u.js), or send me [email](mailto:dsc@less.ly?subject=u.js).
 
 
-[^1]: `u.js` does not provide any DOM manipulation; check out [Zepto.js](http://zeptojs.com) if you
+<a name="fn1" href="#fn1_link">[1]</a>: `u.js` does not provide any DOM manipulation; check out [Zepto.js](http://zeptojs.com) if you
 need to fiddle with DOM elements.
 
