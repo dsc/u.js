@@ -1,0 +1,16 @@
+{
+  "name": "u",
+  "version": "0.1.0",
+  "description": "A minimalist, functional utility library designed for embedding into another small program.",
+  "keywords": [ "functional", "util", "client", "browser", "embedding", "bootstrapper" ],
+  "homepage": "http://dsc.github.com/u.js/",
+  "author": "David Schoonover <dsc@less.ly> (http://less.ly)",
+  
+  "main": "./u.js",
+  "dependencies": {},
+  "repository": { "type": "git", "url": "git://github.com/dsc/u.js.git" },
+  "bugs": { "url": "http://github.com/dsc/u.js/issues" },
+  
+  "engine": { "node": ">=0.4.0" },
+  "license": "MIT"
+}
